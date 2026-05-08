@@ -1,0 +1,26 @@
+Alias name: routine-monsters-upload
+Creation date: May 7, 2026
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Acry, OU=Routine Monsters, O=Acry Apps, L=Hong Kong, ST=Kowloon, C=HK
+Issuer: CN=Acry, OU=Routine Monsters, O=Acry Apps, L=Hong Kong, ST=Kowloon, C=HK
+Serial number: 5fad0da29f556c39
+Valid from: Thu May 07 15:35:18 UTC 2026 until: Mon Sep 22 15:35:18 UTC 2053
+Certificate fingerprints:
+	 SHA1: 69:CE:F7:95:C9:81:36:D6:A8:6F:B2:F6:80:4D:3E:8F:87:6B:79:34
+	 SHA256: AF:37:11:3B:FA:F7:CE:54:89:CC:00:88:76:9E:64:1F:5D:C4:C5:03:97:A2:B8:3E:DA:03:B9:AC:2B:EB:4E:72
+Signature algorithm name: SHA384withRSA
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 3
+
+Extensions: 
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: AE 19 86 CD 56 11 49 A6   AB C2 2A DE 58 8B B3 DD  ....V.I...*.X...
+0010: 22 6E 7D 1E                                        "n..
+]
+]
+
