@@ -1,159 +1,136 @@
 # 🐲 Routine Monsters
 
-> **Turn your daily routines into a monster-taming adventure.**  
-> A gamified habit tracker Android app — built with React + TypeScript + Capacitor. Fully offline-first.
+A habit tracker I built because normal productivity apps are too dead inside.
+
+Routine Monsters turns routines into creatures you have to keep alive.  
+Show up, finish tasks, stack wins. Ignore your life, and your monsters pay the price.
 
 ---
 
-## ✨ What is this?
+## What it is
 
-Routine Monsters is a mobile app that turns your real-life tasks and habits into a game. Complete your routines → earn rewards → level up your monsters. Built solo as a personal project to prove that productivity apps don't have to be boring.
+This is a gamified routine app built around one idea:  
+**consistency feels better when it has consequences, feedback, and a bit of personality.**
+
+Instead of another sterile checklist, I wanted something that feels more like a system you live with.
+So this app mixes habit tracking, rewards, light progression, and monster-style feedback into one offline-first Android app.
 
 ---
 
-## 📱 Download
+## Download
 
 | Build | File | Notes |
-|-------|------|-------|
-| **Debug APK** (sideload) | [`routine-monsters-v1.1-debug.apk`](routine-monsters-v1.1-release.apk) | Enable "Install from unknown sources" |
-| **Release Bundle** (Play Store) | [`routine-monsters-v1.1-release.aab`](routine-monsters-v1.1-release.aab) | For Google Play Console upload |
+|---|---|---|
+| Latest Android APK | [`routine-monsters-v1.1-release.apk`](./routine-monsters-v1.1-release.apk) | Current sideloadable build |
+| Play Store bundle | [`routine-monsters-v1.0-release.aab`](./routine-monsters-v1.0-release.aab) | Existing Google Play upload bundle |
 
-> Version `1.0` · Android API 35 (Android 15+) · App ID: `com.acry.routinemonsters`
-> Version `1.1` · Android API 35 (Android 15+) · App ID: `com.acry.routinemonsters`
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Tech |
-|-------|------|
-| **Frontend** | React 18 + TypeScript + Vite |
-| **Styling** | Tailwind CSS v3 + shadcn/ui (Radix UI) |
-| **Animations** | Framer Motion |
-| **State / Data** | TanStack Query + Drizzle ORM |
-| **Mobile** | Capacitor v8 (Android) |
-| **Local Storage** | `@capacitor/preferences` (fully offline) |
-| **Web Backend** | Express.js + better-sqlite3 (web preview only) |
-| **Forms** | React Hook Form + Zod |
-| **Routing** | Wouter |
+**App ID:** `com.acry.routinemonsters`  
+**Target:** Android 15 / API 35
 
 ---
 
-## 🏗️ Architecture
+## Screens
 
-```
-Routine Monsters
-├── React Frontend (Vite)
-│   ├── Screens: Home, Routines, Tasks, Rewards, Profile
-│   └── Components: shadcn/ui + custom monster UI
-│
-├── Capacitor Android Wrapper
-│   ├── nativeApi.ts — offline-first data layer
-│   └── @capacitor/preferences — replaces SQLite on device
-│
-└── Express Backend (web preview only)
-    └── better-sqlite3 + Drizzle ORM
-```
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160544_Routine%20Monsters.jpg" width="30%" />
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160551_Routine%20Monsters.jpg" width="30%" />
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160558_Routine%20Monsters.jpg" width="30%" />
+</div>
 
-On **Android**, the app runs entirely offline — no backend server needed. Routines, tasks, profiles, rewards, and run history are all stored locally on device via Capacitor Preferences.
-
-The **web preview** (dev mode) still uses the Express + SQLite backend.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160608_Routine%20Monsters.jpg" width="30%" />
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160613_Routine%20Monsters.jpg" width="30%" />
+  <img src="https://raw.githubusercontent.com/Cryjai/RoutineMonsterApp/main/Routine%20Monsters%20Pics/Screenshot_20260508_160619_Routine%20Monsters.jpg" width="30%" />
+</div>
 
 ---
 
-## 🚀 Getting Started
+## Why I made it
 
-### Prerequisites
+A lot of habit apps are technically fine but emotionally empty.
+They track tasks, but they don’t create attachment.
 
-- Node.js 20+
-- Android Studio (for Android build)
-- Java 17+
+I wanted something that makes routine-building feel more alive:
+- your progress should feel visible
+- your slips should feel real
+- your system should feel like it belongs to you, not like a spreadsheet pretending to be a life
 
-### Web Development
+That’s where the monster layer comes in.
+
+---
+
+## What it does
+
+- Build routines and break them into actual tasks
+- Tie routines to monster-style progression
+- Track sessions and run history
+- Earn rewards through consistency
+- Work fully offline on Android
+- Keep personal data on-device instead of depending on a live backend
+
+---
+
+## Tech
+
+| Layer | Stack |
+|---|---|
+| Frontend | React 18, TypeScript, Vite |
+| Mobile | Capacitor Android |
+| UI | Tailwind CSS, Radix UI, custom components |
+| State / Data | TanStack Query, Drizzle ORM |
+| Storage | `@capacitor/preferences` on Android |
+| Web preview | Express + SQLite |
+
+---
+
+## How it works
+
+On Android, the app does not need the Express backend for core flows.
+Routines, tasks, profile data, rewards, app state, and run history are stored locally on-device.
+
+For web preview / development, there is still an Express + SQLite setup.
+
+---
+
+## Local development
 
 ```bash
-# Install dependencies
 npm install
-
-# Start dev server (web preview with Express backend)
 npm run dev
 ```
 
-### Android Build
+### Android build
 
 ```bash
-# Build the web bundle
 npm run build
-
-# Sync to Android
 npx cap sync android
-
-# Open in Android Studio
 npx cap open android
 ```
 
-Then build / run from Android Studio, or:
+---
 
-```bash
-# Build debug APK directly
-cd android && ./gradlew assembleDebug
-```
+## Current state
 
-### Database (web only)
+This is a real working build, not just a UI mockup.
 
-```bash
-# Push schema to SQLite
-npm run db:push
-```
+Current limitations:
+- no account system
+- no cloud sync
+- no push notifications
+- no billing
+- AI coach is rule-based, not an LLM integration
+
+That said, the core loop already works: build routines, complete tasks, track progress, keep the system alive.
 
 ---
 
-## 📁 Project Structure
+## Notes
 
-```
-├── App.tsx              # Root component + routing
-├── main.tsx             # Entry point
-├── nativeApi.ts         # Capacitor offline data layer
-├── storage.ts           # Web storage layer (Express)
-├── schema.ts            # Drizzle ORM schema
-├── routes.ts            # Express API routes
-├── index.css            # Global styles
-├── tailwind.config.ts   # Tailwind config
-├── capacitor.config.ts  # Capacitor config
-├── server/              # Express backend
-├── script/              # Build scripts
-└── release/             # Release artifacts
-```
+Built by [Cryjai](https://github.com/Cryjai) in Hong Kong.  
+This project is part of a bigger direction I’m exploring: building products that make self-management feel less boring, less sterile, and more human.
 
 ---
 
-## 🎮 Features
-
-- **Routine Management** — Create routines with custom tasks, frequency, and schedules
-- **Monster System** — Each routine is tied to a monster that reflects your consistency
-- **Reward Shop** — Complete tasks to earn coins and unlock rewards
-- **Run History** — Track your past sessions and progress over time
-- **AI Coach** — Deterministic in-app coach that gives contextual tips (no external API)
-- **Dark / Light Mode** — System-aware theming via `next-themes`
-- **100% Offline** — No account, no cloud, no nonsense. Your data stays on your device.
-
----
-
-## ⚠️ Known Limitations (v1.0)
-
-- No real OAuth / login system
-- No cross-device sync (data is local only)
-- No push notifications
-- No Google Play Billing
-- AI Coach is rule-based, not an LLM
-- Store listing, screenshots, and privacy policy pending before public Play Store launch
-
----
-
-## 📄 License
+## License
 
 [MIT](./LICENSE)
-
----
-
-<p align="center">Built by <a href="https://github.com/Cryjai">Cryjai</a> · Made in Hong Kong 🇭🇰</p>
