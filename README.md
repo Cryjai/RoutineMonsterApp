@@ -15,10 +15,11 @@ Routine Monsters is a mobile app that turns your real-life tasks and habits into
 
 | Build | File | Notes |
 |-------|------|-------|
-| **Debug APK** (sideload) | [`routine-monsters-v1.0-debug.apk`](./routine-monsters-v1.0-debug.apk) | Enable "Install from unknown sources" |
-| **Release Bundle** (Play Store) | [`routine-monsters-v1.0-release.aab`](./routine-monsters-v1.0-release.aab) | For Google Play Console upload |
+| **Debug APK** (sideload) | [`routine-monsters-v1.1-debug.apk`](./routine-monsters-v1.1-debug.apk) | Enable "Install from unknown sources" |
+| **Release Bundle** (Play Store) | [`routine-monsters-v1.1-release.aab`](./routine-monsters-v1.1-release.aab) | For Google Play Console upload |
 
 > Version `1.0` · Android API 35 (Android 15+) · App ID: `com.acry.routinemonsters`
+> Version `1.1` · Android API 35 (Android 15+) · App ID: `com.acry.routinemonsters`
 
 ---
 
