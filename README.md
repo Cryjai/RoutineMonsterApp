@@ -9,8 +9,6 @@
 
 Routine Monsters is a mobile app that turns your real-life tasks and habits into a game. Complete your routines → earn rewards → level up your monsters. Built solo as a personal project to prove that productivity apps don't have to be boring.
 
-**Key concept:** Instead of a boring checklist, you have monsters to care for. Neglect your routines and your monsters suffer. Stay consistent and they thrive. It's basically Tamagotchi but for people who procrastinate.
-
 ---
 
 ## 📱 Download
