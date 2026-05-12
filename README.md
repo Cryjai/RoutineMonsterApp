@@ -28,7 +28,6 @@ So this app mixes habit tracking, rewards, light progression, and monster-style 
 **Target:** Android 15 / API 35
 ---
 ## Video walkthrough 
-## Demo Video
 
 [![Watch the Routine Monster demo](https://img.youtube.com/vi/csd9EkVXQjU/0.jpg)](https://www.youtube.com/watch?v=csd9EkVXQjU)
 
